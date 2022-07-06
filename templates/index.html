@@ -76,7 +76,7 @@
                       <div class="input-group-desc">
                         <input
                           class="input--style-5"
-                          type="number"
+                          type="text"
                           name="visibility"
                         />
                         <label class="label--desc">Visibility</label>
@@ -84,11 +84,7 @@
                     </div>
                     <div class="col-3">
                       <div class="input-group-desc">
-                        <input
-                          class="input--style-5"
-                          type="number"
-                          name="mrp"
-                        />
+                        <input class="input--style-5" type="text" name="mrp" />
                         <label class="label--desc">MRP</label>
                       </div>
                     </div>
@@ -96,7 +92,7 @@
                       <div class="input-group-desc">
                         <input
                           class="input--style-5"
-                          type="number"
+                          type="text"
                           name="weight"
                         />
                         <label class="label--desc">Weight</label>
@@ -106,7 +102,7 @@
                       <div class="input-group-desc">
                         <input
                           class="input--style-5"
-                          type="number"
+                          type="text"
                           name="outlet_establishment_year"
                         />
                         <label class="label--desc">Est. Year</label>
@@ -277,7 +273,7 @@
             console.log(data);
             var resContent =
               "<h4>XGBoost:" +
-              data["pred"]["xg"] +
+              data["pred"]["xgb"] +
               "</h4><h4>Catboost:" +
               data["pred"]["cat"] +
               "</h4><h4>LightBGM:" +

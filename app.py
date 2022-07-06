@@ -44,11 +44,13 @@ def result():
     model3= joblib.load(open(model_path3, 'rb'))
     model1=xgb.Booster()
     model1.load_model('xgb.json')
-    # pred_1=model1.predict(X)
+    xMatrix=xgb.DMatrix(X)
+   
+    pred_1=model1.predict(xMatrix)
     pred_2=model2.predict(X)
     pred_3=model3.predict(X)
-    print(pred_2,pred_3)
-    return jsonify({'pred':{'xgb':round(float(0),3),'cat': round(float(pred_2),3),
+    print(pred_1,pred_2,pred_3)
+    return jsonify({'pred':{'xgb':round(float(pred_1),3),'cat': round(float(pred_2),3),
     'lbg':round(float(pred_3),3)}})
 
 if __name__ == "__main__":
